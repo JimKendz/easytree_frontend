@@ -1,0 +1,14 @@
+small{
+    font-size: 12px;
+    color: red;
+    display: none;
+    white-space: pre;
+}
+
+input:invalid[accept="true"]{
+    border: 1px solid red;
+}
+
+input:invalid[accept="true"] ~ small{
+    display: block;
+}

@@ -1,0 +1,92 @@
+
+
+@media (prefers-color-scheme: light) {
+    .rti--container * {
+        box-sizing: border-box;
+        transition: all 0.2s ease;
+    }
+    
+    .rti--container {
+        --rti-bg: hsl(210 40% 98%) !important;
+        --rti-border: hsl(214.3 31.8% 91.4%) !important;
+        --rti-main: #000000 !important;
+        --rti-radius: 0.75rem !important;
+        --rti-s: 0.5rem;
+        --rti-tag: hsl(210, 40%, 98%) !important;
+        --rti-tag-remove: hsl(0 84.2% 60.2%) !important;
+    
+        /* Container Styles */
+        align-items: center;
+        background: transparent !important;
+        border: 1px solid hsl(217.2 32.6% 17.5%) !important;
+        border-radius: calc(var(--rti-radius) - 2px);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--rti-s);
+        line-height: 1.25rem !important;
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    .rti--container:focus-within {
+        outline: 2px solid !important;
+        outline-offset: 2px !important;
+        border-color: var(--rti-border) !important;
+        box-shadow: none !important;
+    }
+    
+    .rti--input {
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+        width: 40% !important;
+    }
+    
+    .rti--input::placeholder {
+        color: hsl(215.4 16.3% 46.9%) !important;
+    }
+    
+    .rti--tag {
+        align-items: center;
+        background: var(--rti-tag);
+        border-radius: var(--rti-radius);
+        display: inline-flex;
+        justify-content: center;
+        font-size: 0.875rem !important;
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+    }
+    
+    .rti--tag button {
+        background: none;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        line-height: inherit;
+        padding: 0 var(--rti-s);
+    }
+    
+    .rti--tag button:hover {
+        color: var(--rti-tag-remove);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .rti--container {
+        background: transparent !important;
+        border: 1px solid var(--rti-border) !important;
+    }
+
+    .rti--container:focus-within {
+        outline: none !important;
+        outline-offset: 2px !important;
+        border-color: hsl(217.2 32.6% 17.5%) !important;
+        box-shadow: none !important;
+    }
+}
